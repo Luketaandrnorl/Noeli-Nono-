@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conexão Campo e Cidade</title>
+<style>
+  :root {
+    --green-dark: #1e4d2b;
+    --green-medium: #3a7d44;
+    --green-light: #b4dd91;
+    --beige-light: #f0f3e8;
+    --text-color: #2e3a2f;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background: var(--beige-light);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--green-medium), var(--green-dark));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 0.1rem;
+  }
+  header p {
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  section.intro p {
+    font-size: 1.2rem;
+  }
+  section.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  section.content img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  section.content img:hover {
+    transform: scale(1.03);
+  }
+  section.text-block {
+    font-size: 1.1rem;
+  }
+  section.text-block h2 {
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+    border-left: 5px solid var(--green-medium);
+    padding-left: 0.75rem;
+  }
+  footer {
+    background: var(--green-dark);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Slideshow styles */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto 3rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  .active-slide {
+    display: block;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0.75rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    user-select: none;
+    background: rgba(30, 77, 43, 0.7);
+    transform: translateY(-50%);
+    transition: background 0.3s ease;
+  }
+  .prev:hover, .next:hover {
+    background: rgba(58, 125, 68, 0.9);
+  }
+  .prev {
+    left: 15px;
+  }
+  .next {
+    right: 15px;
+  }
+
+  @media (max-width: 768px) {
+    section.content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>A Dança do Campo e da Cidade: Uma Relação de Interdependência</h1>
+  <p>A importância da união entre ambientes rurais e urbanos</p>
+</header>
+<main>
+  <section class="intro">
+    <p>O campo e a cidade, embora diferentes, são complementares. Unidos, eles formam o alicerce para um desenvolvimento sustentável e harmonioso, promovendo equilíbrio econômico, social e ambiental.</p>
+  </section>
+
+  <section class="slideshow-container" aria-label="Slideshow de imagens de campo e cidade">
+    <div class="slide active-slide">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Campo verde e sereno ao amanhecer" />
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1000&q=80" alt="Panorama urbano com prédios altos" />
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1556740764-3a9b3b454b6e?auto=format&fit=crop&w=1000&q=80" alt="Estrada conectando cidade e campo" />
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80" alt="Mãos de pessoa do campo e da cidade se encontrando" />
+    </div>
+
+    <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+    <button class="next" aria-label="Próxima imagem">&#10095;</button>
+  </section>
+
+  <section class="content">
+    <div class="text-block">
+      <h2>Riqueza do Campo</h2>
+      <p>O campo é fonte de alimentos, recursos naturais e preservação ambiental. A vida rural mantém tradições, promove a agricultura sustentável e sustenta ecossistemas vitais.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=800&q=80" alt="Plantação verde em campo" />
+
+    <img src="https://images.unsplash.com/photo-1468071118269-61b0783453ae?auto=format&fit=crop&w=800&q=80" alt="Vista da cidade com vários prédios modernos" />
+    <div class="text-block">
+      <h2>Dinâmica da Cidade</h2>
+      <p>A cidade impulsiona a inovação, cultura e economia. Centros urbanos são polos de oportunidades, serviços, educação e atividades que conectam pessoas e ideias.</p>
+    </div>
+  </section>
+
+  <section class="text-block" style="max-width: 700px; margin: 0 auto 3rem auto;">
+    <h2>União e Desenvolvimento Sustentável</h2>
+    <p>A integração entre campo e cidade fomenta uma rede colaborativa, onde o conhecimento urbano apoia a inovação rural e o campo oferece equilíbrio ambiental. Essa conexão é essencial para uma sociedade resiliente, que valoriza seus recursos naturais e seu potencial humano.</p>
+  </section>
+</main>
+<footer>
+  &copy; 2024 Conexão Campo e Cidade - Todos os direitos reservados
+</footer>
+<script>
+  // JavaScript for slideshow
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active-slide', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  // Auto slide every 6 seconds
+  setInterval(nextSlide, 6000);
+</script>
+</body>
+</html>
+
